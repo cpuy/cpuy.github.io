@@ -4,12 +4,29 @@ html {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+    padding: 5rem .8rem;
+
     background-color: #252525;
+    color: #fff;
+}
 
-    color: white;
-    height: 200px;
+.HeaderTitle {
+    line-height: 2.35rem;
+    font-size: 2.35rem;
+    font-weight: 300;
+    text-align: center;
+}
 
-    width: 100%;
+.HeaderSubTitle {
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
 }
 
 .u-secondaryBg {
