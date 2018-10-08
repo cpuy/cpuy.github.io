@@ -73,3 +73,21 @@ section {
     font-size: 1.2em;
     /* color: #4486f6; maybe..... */
 }
+
+.Footer {
+    padding: 1.5rem .8rem;
+    font-size: .8rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SocialBar a {
+    color: #414141;
+    font-size: 1.4rem;
+}
+
+.SocialBar a+a {
+    margin-left: 1rem;
+}
