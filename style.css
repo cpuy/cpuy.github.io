@@ -1,35 +1,21 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
-}
-
 header {
-    /* background-color: chartreuse; */
-    /* background-color: #555; */
     background-color: #252525;
-    opacity: 1;
-    background-size: cover;
-    background-position: 50% 50%;
 
     color: white;
     height: 200px;
-}
 
-main {
-    max-width: 900px;
-    margin: auto;
+    width: 100%;
 }
 
 .u-secondaryBg {
     background: #fafafa;
 }
 
-.container {
-    width: 750px;
-    margin: auto;
+.SectionTitle {
+    width: 100%;
+    text-align: center;
+
+    color: #414141;
+    font-size: 2rem;
+    font-weight: 400;
 }
