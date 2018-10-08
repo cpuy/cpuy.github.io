@@ -6,11 +6,9 @@ html {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-
     padding: 5rem .8rem;
-
     background-color: #252525;
     color: #fff;
 }
@@ -41,21 +39,17 @@ section {
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
-
     font-size: 2rem;
     font-weight: 400;
-
     color: #414141;
 }
 
 .SectionTitle::after {
     content: '';
     display: block;
-
     width: 60px;
     margin: auto;
     margin-top: .2rem;
-
     border-bottom: 1px solid rgba(66, 66, 66, 0.15);
 }
 
@@ -64,7 +58,7 @@ section {
     padding: 2rem;
 }
 
-.Card + .Card {
+.Card+.Card {
     margin-top: 1rem;
 }
 
@@ -72,4 +66,10 @@ section {
     color: #414141;
     font-size: 24px;
     font-weight: 200;
+}
+
+.CardTitle--icon {
+    display: block;
+    font-size: 1.2em;
+    /* color: #4486f6; maybe..... */
 }
