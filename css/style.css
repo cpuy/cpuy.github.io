@@ -29,6 +29,7 @@ header {
 
 .About {
     padding: 1.5rem 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .u-secondaryBg {
@@ -69,10 +70,11 @@ section {
 .Card {
     background-color: #f5f5f5;
     padding: 2rem;
+    margin-bottom: 1rem;
 }
 
-.Card+.Card {
-    margin-top: 1rem;
+.Card p {
+    text-align: justify;
 }
 
 .CardTitle {
@@ -103,4 +105,27 @@ section {
 
 .SocialBar a+a {
     margin-left: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+
+    .Cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        margin-left: -1rem;
+    }
+
+    .Cards .Card {
+        width: calc(50% - 1rem - .01px);
+        margin: 0 0 1rem 1rem;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+
+    .Cards .Card {
+        width: calc(25% - 1rem - .01px);
+    }
 }
