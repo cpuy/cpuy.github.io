@@ -27,8 +27,21 @@ header {
     text-align: center;
 }
 
+.About {
+    padding: 1.5rem 0.8rem;
+}
+
 .u-secondaryBg {
     background: #fafafa;
+}
+
+.u-contained {
+    max-width: 900px;
+    margin: auto;
+}
+
+.u-justified {
+    text-align: justify;
 }
 
 section {
