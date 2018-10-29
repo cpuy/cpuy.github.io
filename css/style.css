@@ -73,6 +73,27 @@ section {
     margin-bottom: 1rem;
 }
 
+.Card blockquote {
+    font-size: .8rem;
+    margin: 0 0 .8rem;
+    color: #414141;
+}
+
+.Card blockquote p {
+    margin: 0;
+}
+
+.Card cite {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+
+.Card cite::before {
+    content: '—';
+    margin-right: .4em;
+}
+
 .Card p {
     text-align: justify;
 }
