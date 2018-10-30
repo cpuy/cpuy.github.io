@@ -113,7 +113,6 @@ section {
 .Footer {
     padding: 1.5rem .8rem;
     font-size: .8rem;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,16 +127,68 @@ section {
     margin-left: 1rem;
 }
 
-@media screen and (min-width: 640px) {
+.Timeline {
+    --border-color: rgba(0, 0, 0, .3);
+    --icon-size: 1.5rem;
+}
 
+.Timeline-item {
+    position: relative;
+    padding: 3em 2em 2em;
+    border-left: 2px solid var(--border-color);
+    color: rgba(0, 0, 0, .7);
+    font-size: .9rem;
+}
+
+.Timeline-item h4 {
+    font-size: 1.1rem;
+    line-height: var(--icon-size);
+}
+
+.Timeline-item h4 img {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    margin-right: .4rem;
+}
+
+.Timeline-item::before {
+    content: attr(data-from);
+    
+    position: absolute;
+    left: 2em;
+    top: 1em;
+
+    font-weight: bold;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.Timeline-item::after {
+    content: '';
+    position: absolute;
+    
+    top: 1em;
+    left: -6px;
+
+    width: 10px;
+    height: 10px;
+    
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    background: white;
+}
+
+.Timeline-item:last-child {
+    border-image: linear-gradient(to bottom, var(--border-color) 60%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+@media screen and (min-width: 640px) {
     .Cards {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         margin-left: -1rem;
     }
-
     .Cards .Card {
         width: calc(50% - 1rem - .01px);
         margin: 0 0 1rem 1rem;
@@ -145,7 +196,6 @@ section {
 }
 
 @media screen and (min-width: 1250px) {
-
     .Cards .Card {
         width: calc(25% - 1rem - .01px);
     }
