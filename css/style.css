@@ -241,6 +241,11 @@ section {
 }
 
 @media screen and (min-width: 1250px) {
+    .Cards {
+        max-width: 1850px;
+        margin: auto;
+    }
+    
     .Cards .Card {
         width: calc(25% - 1rem - .01px);
     }
