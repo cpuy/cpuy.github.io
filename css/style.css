@@ -32,6 +32,30 @@ header {
     margin-bottom: 1rem;
 }
 
+.About p {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: .5rem;
+    text-align: justify;
+}
+
+.About a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+
+    background: linear-gradient(#ffd900, #ffd900);
+    background-size: 100% .2em;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom -1px;
+}
+
+.About a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+
 .u-secondaryBg {
     background: #fafafa;
 }
@@ -153,11 +177,9 @@ section {
 
 .Timeline-item::before {
     content: attr(data-from);
-    
     position: absolute;
     left: 2em;
     top: 1em;
-
     font-weight: bold;
     font-weight: 700;
     font-size: .8rem;
@@ -166,13 +188,10 @@ section {
 .Timeline-item::after {
     content: '';
     position: absolute;
-    
     top: 1em;
     left: -6px;
-
     width: 10px;
     height: 10px;
-    
     border-radius: 10px;
     border: 2px solid var(--border-color);
     background: white;
@@ -189,11 +208,11 @@ section {
     color: rgba(0, 0, 0, .5);
 }
 
-.Environment > * {
+.Environment>* {
     display: inline;
 }
 
-.Environment > * + *::before {
+.Environment>*+*::before {
     content: '/';
     margin: 0 .6em;
 }
