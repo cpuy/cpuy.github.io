@@ -8,7 +8,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem .8rem;
+    padding: 5rem .8rem 2rem .8rem;
     background-color: #252525;
     color: #fff;
 }
@@ -21,6 +21,7 @@ header {
 }
 
 .HeaderSubTitle {
+    margin-bottom: 2rem;
     line-height: 1rem;
     font-size: 1rem;
     font-weight: 200;
@@ -143,12 +144,20 @@ section {
 }
 
 .SocialBar a {
-    color: #414141;
-    font-size: 1.4rem;
+    color: inherit;
+    font-size: 1.2rem;
 }
 
 .SocialBar a+a {
     margin-left: 1rem;
+}
+
+.SocialBar--dark a {
+    color: #414141;
+}
+
+.SocialBar--big a {
+    font-size: 1.4rem;
 }
 
 .Timeline {
