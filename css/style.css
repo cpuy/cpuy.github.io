@@ -13,6 +13,18 @@ header {
     color: #fff;
 }
 
+a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+}
+
 .HeaderTitle {
     line-height: 2.35rem;
     font-size: 2.35rem;
@@ -41,20 +53,10 @@ header {
 }
 
 .About a {
-    color: inherit;
-    outline: none;
-    text-decoration: none;
-
     background: linear-gradient(#ffd900, #ffd900);
     background-size: 100% .2em;
     background-repeat: no-repeat;
     background-position: left 0 bottom -1px;
-}
-
-.About a:hover {
-    outline: none;
-    color: inherit;
-    text-decoration: none;
 }
 
 .u-secondaryBg {
@@ -144,7 +146,6 @@ section {
 }
 
 .SocialBar a {
-    color: inherit;
     font-size: 1.2rem;
 }
 
