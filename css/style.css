@@ -1,3 +1,8 @@
+:root {
+    --secondary-bg-color: #fafafa;
+    --contained-max-width: 900px;
+}
+
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -18,21 +23,6 @@ a:hover {
 section {
     padding: .8rem;
 }
-
-/* Utils                                               */
-.u-secondaryBg {
-    background: #fafafa;
-}
-
-.u-contained {
-    max-width: 900px;
-    margin: auto;
-}
-
-.u-justified {
-    text-align: justify;
-}
-
 
 /*******************************************************/
 /* Header                                              */
@@ -68,10 +58,11 @@ section {
 .About {
     padding: 1.5rem 0.8rem;
     margin-bottom: 1rem;
+    background: var(--secondary-bg-color);
 }
 
 .About p {
-    max-width: 900px;
+    max-width: var(--contained-max-width);
     margin: auto;
     margin-bottom: .5rem;
     text-align: justify;
@@ -85,6 +76,14 @@ section {
 }
 
 /*******************************************************/
+/* Experience                                          */
+/*******************************************************/
+.Experience {
+    max-width: var(--contained-max-width);
+    margin: auto;
+}
+
+/*******************************************************/
 /* Footer                                              */
 /*******************************************************/
 .Footer {
@@ -93,6 +92,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--secondary-bg-color);
 }
 
 /*******************************************************/
