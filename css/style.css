@@ -3,16 +3,6 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem .8rem 2rem .8rem;
-    background-color: #252525;
-    color: #fff;
-}
-
 a {
     color: inherit;
     outline: none;
@@ -23,6 +13,38 @@ a:hover {
     outline: none;
     color: inherit;
     text-decoration: none;
+}
+
+section {
+    padding: .8rem;
+}
+
+/* Utils                                               */
+.u-secondaryBg {
+    background: #fafafa;
+}
+
+.u-contained {
+    max-width: 900px;
+    margin: auto;
+}
+
+.u-justified {
+    text-align: justify;
+}
+
+
+/*******************************************************/
+/* Header                                              */
+/*******************************************************/
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem .8rem 2rem .8rem;
+    background-color: #252525;
+    color: #fff;
 }
 
 .HeaderTitle {
@@ -40,6 +62,9 @@ a:hover {
     text-align: center;
 }
 
+/*******************************************************/
+/* About                                               */
+/*******************************************************/
 .About {
     padding: 1.5rem 0.8rem;
     margin-bottom: 1rem;
@@ -59,23 +84,20 @@ a:hover {
     background-position: left 0 bottom -1px;
 }
 
-.u-secondaryBg {
-    background: #fafafa;
+/*******************************************************/
+/* Footer                                              */
+/*******************************************************/
+.Footer {
+    padding: 1.5rem .8rem;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.u-contained {
-    max-width: 900px;
-    margin: auto;
-}
-
-.u-justified {
-    text-align: justify;
-}
-
-section {
-    padding: .8rem;
-}
-
+/*******************************************************/
+/* Section                                             */
+/*******************************************************/
 .SectionTitle {
     width: 100%;
     text-align: center;
@@ -94,6 +116,9 @@ section {
     border-bottom: 1px solid rgba(66, 66, 66, 0.15);
 }
 
+/*******************************************************/
+/* Cards                                               */
+/*******************************************************/
 .Card {
     background-color: #f5f5f5;
     padding: 2rem;
@@ -137,14 +162,33 @@ section {
     /* color: #4486f6; maybe..... */
 }
 
-.Footer {
-    padding: 1.5rem .8rem;
-    font-size: .8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (min-width: 640px) {
+    .Cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+    }
+    .Cards .Card {
+        width: calc(50% - 1rem - .01px);
+        margin: 0 0 1rem 1rem;
+    }
 }
 
+@media screen and (min-width: 1250px) {
+    .Cards {
+        max-width: 1850px;
+        margin: auto;
+    }
+    
+    .Cards .Card {
+        width: calc(25% - 1rem - .01px);
+    }
+}
+
+/*******************************************************/
+/* SocialBar                                           */
+/*******************************************************/
 .SocialBar a {
     font-size: 1.2rem;
 }
@@ -161,6 +205,9 @@ section {
     font-size: 1.4rem;
 }
 
+/*******************************************************/
+/* Timeline                                            */
+/*******************************************************/
 .Timeline {
     --border-color: rgba(0, 0, 0, .3);
     --icon-size: 1.5rem;
@@ -225,28 +272,4 @@ section {
 .Environment>*+*::before {
     content: '/';
     margin: 0 .6em;
-}
-
-@media screen and (min-width: 640px) {
-    .Cards {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: -1rem;
-    }
-    .Cards .Card {
-        width: calc(50% - 1rem - .01px);
-        margin: 0 0 1rem 1rem;
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .Cards {
-        max-width: 1850px;
-        margin: auto;
-    }
-    
-    .Cards .Card {
-        width: calc(25% - 1rem - .01px);
-    }
 }
