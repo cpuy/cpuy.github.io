@@ -28,24 +28,37 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem .8rem 2rem .8rem;
+    height: 100vh;
+
     background-color: #252525;
     color: #fff;
 }
 
 .HeaderTitle {
-    line-height: 2.35rem;
-    font-size: 2.35rem;
-    font-weight: 300;
-    text-align: center;
+    --title-font-size: 3rem;
+
+    font: var(--title-font-size) 'Italiana', sans-serif;
+    font-weight: normal;
+    margin-top: calc(var(--title-font-size) * -1);
 }
 
 .HeaderSubTitle {
-    margin-bottom: 2rem;
     line-height: 1rem;
     font-size: 1rem;
     font-weight: 200;
-    text-align: center;
+}
+
+.Header-socialBar {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+    .HeaderTitle {
+        --title-font-size: 4rem;
+    }
+    .HeaderSubTitle {
+        font-size: 1.33rem;
+    }
 }
 
 /*******************************************************/
