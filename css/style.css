@@ -135,7 +135,10 @@ a:hover {
 .Card {
     background-color: #f5f5f5;
     padding: 2rem;
-    margin-bottom: 1rem;
+}
+
+.Card + .Card {
+    margin-top: .8rem;
 }
 
 .Card blockquote {
@@ -180,11 +183,15 @@ a:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-left: -1rem;
+        justify-content: space-between;
     }
-    .Cards .Card {
-        width: calc(50% - 1rem - .01px);
-        margin: 0 0 1rem 1rem;
+
+    .Card {
+        width: calc(50% - .4rem);
+    }
+
+    .Cards .Card:nth-child(2) {
+        margin: 0;
     }
 }
 
@@ -195,7 +202,8 @@ a:hover {
     }
     
     .Cards .Card {
-        width: calc(25% - 1rem - .01px);
+        width: calc(25% - .6rem);
+        margin: 0;
     }
 }
 
