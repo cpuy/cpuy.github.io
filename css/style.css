@@ -91,13 +91,18 @@ a:hover {
 /*******************************************************/
 .About {
     background: var(--secondary-bg-color);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .About p {
     max-width: var(--contained-max-width);
     margin: auto;
-    margin-bottom: .8rem;
     text-align: justify;
+}
+
+.About p + p {
+    margin-top: 1rem;
 }
 
 .About a {
