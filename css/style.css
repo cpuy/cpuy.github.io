@@ -21,6 +21,31 @@ a:hover {
 }
 
 /*******************************************************/
+/* Section                                             */
+/*******************************************************/
+.Section {
+    padding: 2.5rem .8rem;
+}
+
+.SectionTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #414141;
+}
+
+.SectionTitle::after {
+    content: '';
+    display: block;
+    width: 60px;
+    margin: auto;
+    margin-top: .2rem;
+    border-bottom: 1px solid rgba(66, 66, 66, 0.15);
+}
+
+/*******************************************************/
 /* Header                                              */
 /*******************************************************/
 .Header {
@@ -65,15 +90,13 @@ a:hover {
 /* About                                               */
 /*******************************************************/
 .About {
-    padding: 1.5rem 0.8rem;
-    margin-bottom: 1rem;
     background: var(--secondary-bg-color);
 }
 
 .About p {
     max-width: var(--contained-max-width);
     margin: auto;
-    margin-bottom: .5rem;
+    margin-bottom: .8rem;
     text-align: justify;
 }
 
@@ -102,31 +125,6 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     background: var(--secondary-bg-color);
-}
-
-/*******************************************************/
-/* Section                                             */
-/*******************************************************/
-.Section {
-    padding: .8rem;
-}
-
-.SectionTitle {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 400;
-    color: #414141;
-}
-
-.SectionTitle::after {
-    content: '';
-    display: block;
-    width: 60px;
-    margin: auto;
-    margin-top: .2rem;
-    border-bottom: 1px solid rgba(66, 66, 66, 0.15);
 }
 
 /*******************************************************/
