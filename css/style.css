@@ -6,6 +6,7 @@
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -49,6 +50,8 @@ a:hover {
 /* Header                                              */
 /*******************************************************/
 .Header {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,6 +80,20 @@ a:hover {
     margin-top: 2rem;
 }
 
+.Header-scrollIndicator {
+    position: absolute;
+    bottom: 6rem;
+
+    padding: .2rem;
+    font-size: 1.2rem;
+
+    opacity: 0;
+    animation-name: arise;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
 @media screen and (min-width: 750px) {
     .HeaderTitle {
         --title-font-size: 4rem;
@@ -86,6 +103,14 @@ a:hover {
     }
 }
 
+@keyframes arise {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 /*******************************************************/
 /* About                                               */
 /*******************************************************/
