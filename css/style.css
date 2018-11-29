@@ -187,6 +187,8 @@ a:hover {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        max-width: var(--contained-max-width);
+        margin: auto;
     }
 
     .Card {
@@ -194,18 +196,6 @@ a:hover {
     }
 
     .Cards .Card:nth-child(2) {
-        margin: 0;
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .Cards {
-        max-width: 1850px;
-        margin: auto;
-    }
-    
-    .Cards .Card {
-        width: calc(25% - .6rem);
         margin: 0;
     }
 }
