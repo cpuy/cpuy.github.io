@@ -51,7 +51,7 @@
           <i class="fas fa-envelope"></i>
         </a>
       </div>
-      <a href="#about" class="Header-scrollIndicator">↓</a>
+      <a href="#about" data-smooth-scroll class="Header-scrollIndicator">↓</a>
     </header>
 
     <section id="about" class="Section About">
@@ -239,5 +239,37 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      /* Simple polyfill for css scroll-behavior: smooth currently not supported by safari and ie,
+        add `data-smooth-scroll`attribute to a link having a href pointing to an 
+        element of the page by its id
+        At the time of writing this does not work on ie since dynamic import is not supported
+      */
+      if (!("scrollBehavior" in document.documentElement.style)) {
+        
+        const scrollTo = (element) => {
+          window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop
+          });
+        }
+
+        const scrollToListener = (element) => {
+            element.preventDefault();
+            const targetId = element.target.getAttribute("href").slice(1);
+            scrollTo(document.getElementById(targetId));
+        }
+        
+        // import smooth scroll behavior js polyfill
+        import("./js/smoothscroll.min.js")
+          .then(() => {
+            const smoothScrollElements = document.querySelectorAll("a[data-smooth-scroll]");
+            smoothScrollElements.forEach(e => e.addEventListener('click', scrollToListener));
+          })
+          .catch(err => console.error(err));
+      }
+    </script>
   </body>
 </html>
